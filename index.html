@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#153b5b">
+  <title>Calculadora de Pliegos Grafitec</title>
+  <meta name="description" content="Calcula diseños por pliego, merma y visualiza la imposición desde tu celular.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main>
+  <header><div><span class="eyebrow">Herramienta para imprenta</span><h1>Calculadora de pliegos</h1><p>Calcula y visualiza la imposición desde tu celular.</p></div><button id="reset" type="button">Restablecer ejemplo</button></header>
+  <section class="results"><article><span>Diseños por pliego</span><strong id="total">0</strong></article><article><span>Pliegos sin merma</span><strong id="net">0</strong></article><article class="primary"><span>Pliegos con merma</span><strong id="wasteSheets">0</strong></article></section>
+  <div class="workspace">
+    <section class="panel formPanel"><div class="sectionHead"><div><h2>Ingresa tus medidas</h2><span>Se guardan automáticamente</span></div></div><div class="fields" id="fields"></div></section>
+    <section class="panel visualPanel"><div class="sectionHead"><div><h2>Vista exacta del pliego</h2><span id="arrangement"></span></div><div class="legend"><i></i>Normal <i class="green"></i>Girada</div></div>
+      <div class="drawing"><svg id="sheetDrawing" role="img" aria-label="Vista del pliego"></svg></div>
+      <div class="details"><span>Área útil <b id="usable"></b></span><span>Imprimir con merma <b id="target"></b></span></div>
+    </section>
+  </div>
+  <footer>La vista muestra filas completas rectangulares. Para troqueles irregulares se requiere una imposición especializada.</footer>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
